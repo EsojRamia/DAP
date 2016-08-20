@@ -1,0 +1,114 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>DAP-JdelaGarzaH-A03</title>
+		<style type="text/css">
+			body{background-color: blue}
+			table {font-size: 20px;
+				   font-weight:bold;
+				   font-family: times new roman;
+				   border: red 5px solid;}
+			h1{font-family:arial,sans-serif;
+				text-align: center;
+				color: yellow;}
+			h2{font-family:arial, sans-serif;
+				text-align: center;
+				color: orange;}
+			p  {font-size:20pt;
+				font-family:times new roman, sans-serif;
+				color: white;}
+			
+		</style>
+		
+		<!-- En la parte de estilo decidi cambiarle de color al body, alterar la tabla de acuerdo a su tammaño, los bordes y el tipo de letra. Ademas le movi el tipo de texto de los parrafos, titulo y subtitulos para que se diferenciaran entre si. Todo esto lo hice utilizando las etiquetas de style. -->
+	</head>
+	<body>
+		<h1>Solicitud de Empleo</h1>
+		<form>
+			<p>
+				Fecha <input name="fecha" type="date" size="20"> 
+				Puesto que solicita y turno de interes <input name="typ" type="text" size="20" maxlength="20">
+				Sueldo Mensual <input name="typ" type="text" size="10" maxlength="20">
+			</p>
+			<h2>Datos Personales</h2>
+			<p>
+				Apellido Paterno <input name="aPaterno" type="text" size="20" maxlength="20">
+				Apellido Materno <input name="aMaterno" type="text" size="20" maxlength="20">
+				Nombre <input name="Nombre" type="text" size="20" maxlength="20">
+				Edad <input name="edad" type="number" size="2" maxlength="2">
+				Estatura <input name="estatura" type="number" size="3"  maxlength="3">
+				Peso <input name="peso" type="number" size="3"  maxlength="3">
+				Estado Civil <input name="eCivil" type="text" size="20"  maxlength="20"> <br />
+				Direccion <input name="direccion" type="text" size="50"  maxlength="50">
+				Codigo Postal <input name="cp" type="number" size="6"  maxlength="6">
+				Telefono <input name="telefono" type="number" size="10"  maxlength="10">
+				Sexo <input name="sexo" type="text" size="1"  maxlength="1"><br />
+				Fecha de Nacimiento <input name="fechaN" type="date" size="10"> 
+				Lugar de Nacimiento <input name="lNacimiento" type="text" size="15"  maxlength="15"> 
+				Nacionalidad <input name="nacionalidad" type="text" size="10"  maxlength="10"><br />
+				Vive con: <input type="radio" name="vive" value="1" checked>Padres 
+						  <input type="radio" name="vive" value="0">Familia 
+						  <input type="radio" name="vive" value="0">Solo <br />
+				Clave ISSEMYM <input name="issemym" type="text" size="8" maxlength="8"> 
+				Correo electronico (e-mail) <input name="e-mail" type="text" size="15" maxlength="20">
+				Licencia de manejo <input name="manejo" type="text" size="2" maxlength="2">
+				Registro Federal de Contribuyentes <input name="rFederal" type="text" size="20" maxlength="20"><br />
+				Estado de Salud <input type="radio" name="eSalud" value="1" checked>Bueno 
+								<input type="radio" name="eSalud" value="0">Regular 
+								<input type="radio" name="eSalud" value="0">Malo <br />
+				Enfermedad Cronica <input type="radio" name="eCronica" value="1" checked>Si  
+								   <input type="radio" name="eCronica" value="0">No  
+								   Cual: <input type="text" name="eCronica" size="15" maxlength="15"> <br />
+				Deporte <input name="deporte" type="text" size="15" maxlength="20">
+				Club Social o Deportivo <input name="cyd" type="text" size="15" maxlength="20">
+				Pasatiempo Favorito <input name="pasatiempo" type="text" size="15" maxlength="20"><br />
+				Meta en la vida <input name="metavida" type="text" size="80" maxlength="100">
+			</p>
+			<h2>Datos Familiares</h2>
+			<p>
+				<center><table>
+					<tr>
+						<th>Nombre</th>
+						<th>Vive</th>
+						<th>Finado</th>
+						<th>Domicilio</th>
+						<th>Ocupacion</th>
+					</tr>
+					<tr>
+						<th>Padre <input name="padre" type="text" size="15" maxlength="30"></th>
+						<th><input name="vpadre" type="text" size="2" maxlength="2"></th>
+						<th><input name="fpadre" type="text" size="2" maxlength="2"></th>
+						<th><input name="dpadre" type="text" size="15" maxlength="40"></th>
+						<th><input name="opadre" type="text" size="15" maxlength="20"></th>
+					</tr>
+					<tr>
+						<th>Madre <input name="madre" type="text" size="15" maxlength="30"></th>
+						<th><input name="vmadre" type="text" size="2" maxlength="2"></th>
+						<th><input name="fmadre" type="text" size="2" maxlength="2"></th>
+						<th><input name="dmadre" type="text" size="15" maxlength="40"></th>
+						<th><input name="omadre" type="text" size="15" maxlength="20"></th>
+					</tr>
+					<tr>
+						<th>Esposa(o) <input name="esposa" type="text" size="15" maxlength="30"></th>
+						<th><input name="vesposa" type="text" size="2" maxlength="2"></th>
+						<th><input name="fesposa" type="text" size="2" maxlength="2"></th>
+						<th><input name="desposa" type="text" size="15" maxlength="40"></th>
+						<th><input name="oesposa" type="text" size="15" maxlength="20"></th>
+					</tr>
+					<tr>
+						<th>Hija(o) <input name="hija" type="text" size="15" maxlength="30"></th>
+						<th><input name="vhija" type="text" size="2" maxlength="2"></th>
+						<th><input name="fhija" type="text" size="2" maxlength="2"></th>
+						<th><input name="dhija" type="text" size="15" maxlength="40"></th>
+						<th><input name="ohija" type="text" size="15" maxlength="20"></th>
+					</tr>
+				</table></center>
+				
+				<!-- En esta parte utilice una tabla porque con esto se me hizo más facil acomodar la información. Movi la tabla para que se acomodara en el centro y le puse a los inputs tex para que el usuario pudiera escribir dentro de la tabla. -->
+			</p>
+		</form>
+		
+		<!-- Para la forma utilice varios inputs para cada tipo de preguntas. Utilice text para los que se requeria escribir, number para las que solo utilizaban numeros, date para los que requerían de una fecha, radio para crear las opciones en algunas preguntas. Tambien les añadi size para acomodarlos en el espacio y un maxlength para definir hasta donde se puede escribir. -->
+	</body>
+</html>
