@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+
+<html> 
+	<head>
+		<title>DAP-JdelaGarzaH-A05</title>
+		<script > //Se utiliza esta etiqueta para agregar javascript
+			var imc;//indice de masa corporal
+			var peso;//Marca el peso de la persona
+			var estatura;//Marca la estatura de la persona
+			imc=0; //Inicialización de la variable imc
+
+			solicitarDatos();
+			imc = calcularIMC(peso,estatura);
+			mostrarResultados(clasificarIMC(imc));
+			//Se mandan a llamar las funciones, primero solicitando los datos, luego calcular los datos con las variables peso y estatura, para al final mostrar los resultados metiendo como variable el resultado de la funcion de clasificar el IMS
+			
+
+			function solicitarDatos(){ //Función que se utiliza para solicitar los datos del programa
+				peso = window.prompt("Pon lo que pesas en kilogramos","");
+				estatura = window.prompt("Pon lo que mides en centimetros","");
+				// Se utiliza el window.prompt para mostrar una ventanita y que el usuario pueda ingresar los datos y sean guardados en las variables
+
+			}
+
+			function calcularIMC(peso, estatura){//Función que se utiliza para para calcular el IMC
+				var resultado;
+				var e;
+				var pesoV;
+				var estaturaV;
+				//Variables de la funcion calcularIMC
+
+				resultado=0;
+				e =0;
+				pesoV=0;
+				estaturaV=0;
+				//Inicialización
+
+				pesoV=parseInt(peso);
+				estaturaV=parseInt(estatura);
+				//Los datos de las variables peso y estatura se convierten en integers para que se puedan utilizar en las  operaciones
+
+				estaturaV= estaturaV / 100
+				e = estaturaV * estaturaV;
+				resultado = pesoV / e;
+				//Operaciones para calcular el IMC
+
+				return resultado;//Se regresa la variable resultado
+			}
+
+			 function clasificarIMC(imc){//Función que se utiliza para clasificar los resultados del calculo imc
+				var res;
+				//Variable de la funcion clasificarIMC
+
+				if(imc < 18){
+					res = "peso bajo";
+				}
+
+				else{
+					if(imc>=18 && imc<=24.9){
+						res = "Normal";
+					}
+					else{
+						if(imc>=25 && imc<=26.9){
+							res = "Sobrepeso";
+						}
+						else{
+							res = "Obesidad";
+						}
+					}
+				}
+				//se utiliza los if...else para que el programa vaya observando y clasificando él IMC de acuerdo si la persona tiene el peso bajo, delgado, sobrepeso u obeso
+				return res;//Se regresa la variable res
+			}
+
+			function mostrarResultados(resultado){//Función que sirve para mostrar el resultado
+				document.writeln("<h1> Tu indice de masa corporal dice que tienes: "+ resultado+ "</h1>");
+				//Se utiliza el comando documento.writeln para mostrar el resultado de lo que se obtuvo en la clasificación y se coloca la etiqueta h1 para darle un máyor resalte al texto
+
+			}
+		</script>
+	</head>
+</html>
