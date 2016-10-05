@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>DAP-JdelaGarzaH-A06</title>
+		<style type="text/css">
+			body{background-color: orange}
+			table {font-size: 20px;
+				   font-weight:bold;
+				   font-family: times new roman;
+				   border: red 5px solid;}
+			h1{font-family:arial,sans-serif;
+				text-align: center;
+				color: yellow;}
+			h2{font-family:arial, sans-serif;
+				text-align: center;
+				color: orange;}
+			p  {font-size:20pt;
+				font-family:times new roman, sans-serif;
+				color: white;}
+			
+		</style>
+	</head>
+
+	<body>
+
+		<center><h1>Getter y Setter</h1></center>
+
+		<p>Instead of defining separate methods as getters and setters, jQuery uses the same method as both a getter and a setter and determines which action is being performed by what parameters are passed to the method. When used as a setter the method will set values on every element within the jQuery object and then return the jQuery object allowing the method to be used as a setter anywhere within a method chain. When used as a getter the method returns the value from the first element in the jQuery object and therefore must be the last method in the chain.</p>
+
+		<table border="3">
+			<tr>
+				<th>Comando</th>
+				<th>Explicacion</th>
+				<th>Ejemplo</th>
+			</tr>
+
+			<tr>
+				<th>jQuery.get()</th>
+				<th>Load data from the server using a HTTP GET request.</th>
+				<th>
+					<p>
+						$.get( "test.php", function( data ) {<br />
+  						alert( "Data Loaded: " + data );<br />
+						});
+					</p>
+				</th>
+			</tr>
+
+			<tr>
+				<th>addClass()</th>
+				<th>Adds one or more classes to the selected elements</th>
+				<th>
+					<p>
+						$("button").click(function(){<br />
+    						$("h1, h2, p").addClass("blue");<br />
+    						$("div").addClass("important");<br />
+						});
+					</p>
+				</th>
+			</tr>
+
+			<tr>
+				<th>removeClass()</th>
+				<th>Removes one or more classes from the selected elements</th>
+				<th>
+					<p>
+						$("button").click(function(){<br />
+    						$("h1, h2, p").removeClass("blue");<br />
+						});
+					</p>
+				</th>
+			</tr>
+
+			<tr>
+				<th>toggleClass()</th>
+				<th>Toggles between adding/removing classes from the selected elements</th>
+				<th>
+					<p>
+						$("button").click(function(){<br />
+    						$("h1, h2, p").toggleClass("blue");<br />
+						});
+					</p>
+				</th>
+			</tr>
+
+			<tr>
+				<th>attr()</th>
+				<th>get or set values on HTML attributes.</th>
+				<th>
+					<p>
+						var rad, tx;<br />
+						rad = document.getElementById('r1');<br />
+						tx = 'The value of the name attribute of the first radio button is "' + rad.name + '"';<br />
+						document.getElementById('txt').innerHTML = tx;
+
+					</p>
+				</th>
+			</tr>
+
+			<tr>
+				<th>css()</th>
+				<th>Sets or returns the style attribute</th>
+				<th>
+					<p>
+						$("p").css({"background-color": "yellow", "font-size": "200%"});
+					</p>
+				</th>
+			</tr>
+
+			<tr>
+				<th>val()</th>
+				<th>to get or set form field values.</th>
+				<th>
+					<p>
+						var singleValues = $( "#single" ).val();
+					</p>
+				</th>
+			</tr>
+
+			<tr>
+				<th>html()</th>
+				<th>to get or set the HTML content.</th>
+				<th>
+					<p>
+						$( "p" ).click(function() {<br />
+  						var htmlString = $( this ).html();<br />
+  						$( this ).text( htmlString );<br />
+						});
+
+					</p>
+				</th>
+			</tr>
+
+			<tr>
+				<th>text()</th>
+				<th>to get or set plain text content.</th>
+				<th>
+					<p>
+						var str = $( "p:first" ).text();
+					</p>
+				</th>
+			</tr>
+
+		</table>
+
+		<h3><b>Bibliografia</b></h3>
+		<ul>
+			<li>https://api.jquery.com/jquery.get/</li>
+			<li>http://www.w3schools.com/jquery/jquery_css_classes.asp</li>
+			<li>http://javascriptexample.net/jquery06.php</li>
+			<li>http://api.jquery.com/val/</li>
+			<li>http://api.jquery.com/text/</li>
+			<li>http://api.jquery.com/html/</li>
+		</ul>
+	</body>
+
+</html>
