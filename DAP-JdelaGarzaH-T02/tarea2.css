@@ -1,0 +1,30 @@
+body{
+  background-color: blue;
+  font-family: Hind+Madurai;
+}
+
+h1{
+	font-weight:bold;
+	font-family: times new roman;
+	text-align: center;
+	color:orange;
+}
+
+p{
+	font-family: arial;
+	font-size: 16px;
+	text-align: center;
+	color:red;
+}
+div{
+  text-align: center
+}
+
+img{
+  height: 100px;
+  width: 100px;
+}
+
+button{
+  text-align: center;
+}
