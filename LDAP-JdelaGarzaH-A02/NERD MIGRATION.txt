@@ -1,0 +1,43 @@
+php artisan migrate:make create_nerds_table --table=nerds --create
+
+Se crea en app/database/migrations
+
+// app/database/migrations/####_##_##_######_create_nerds_table.php
+
+<?php
+
+use IlluminateDatabaseSchemaBlueprint;
+use IlluminateDatabaseMigrationsMigration;
+
+class CreateNerdsTable extends Migration {
+
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('nerds', function(Blueprint $table)
+        {
+            $table->increments('id');
+
+            $table->string('josemaria', 255);
+            $table->string('jmgh2010@hotmail.com', 255);
+            $table->integer('5');
+
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::drop('nerds');
+    }
+
+}
